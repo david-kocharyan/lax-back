@@ -6,7 +6,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>3DES | Login</title>
+    <title>Lax | Login</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
