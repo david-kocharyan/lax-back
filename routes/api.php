@@ -24,17 +24,24 @@ Route::group(['namespace' => 'Api', "prefix" => "v1"], function () {
         Route::post('sign-up', 'AuthController@signup');
         Route::post('sign-in', 'AuthController@login');
 
-        Route::group(['middleware' => 'auth:api'], function() {
+        Route::group(['middleware' => 'auth:api'], function () {
             Route::get('logout', 'AuthController@logout');
             Route::get('get-user', 'AuthController@user');
         });
     });
 
+    Route::post('contact-store', 'ContactController@store');
+    Route::post('subscriber-store', 'SubscribeController@store');
+
+    Route::group(['prefix' => 'blog'], function () {
+        Route::get('all', 'BlogController@index');
+        Route::post('article', 'BlogController@article');
+    });
+
+});
+
+
 //    Route::group(['prefix' => 'reset'], function () {
 //        Route::post('send-mail', 'PasswordReset@getMail');
 //        Route::post('password', 'PasswordReset@changePassword');
 //    });
-
-    Route::post('contact-store', 'ContactController@store');
-    Route::post('subscriber-store', 'SubscribeController@store');
-});
