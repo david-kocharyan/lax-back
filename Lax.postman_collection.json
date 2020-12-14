@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "dd359027-3635-4510-8737-45c4aa9d66a1",
+		"name": "Lax",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Get Article",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://lax-back.aimtech.am/api/v1/blog/article?id=2",
+							"protocol": "https",
+							"host": [
+								"lax-back",
+								"aimtech",
+								"am"
+							],
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"article"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/api/v1/blog/all?page=2$limit=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"blog",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2$limit=1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/api/v1/blog/all?page=1&limit=10",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"v1",
+										"blog",
+										"all"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Sep 2020 13:00:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Sep 2020 13:00:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.3.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"\",\n    \"data\": {\n        \"list\": [\n            {\n                \"id\": 2,\n                \"title\": \"test1\",\n                \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\\r\\n\\r\\nWhy do we use it?\\r\\nIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\",\n                \"image\": \"http://localhost:8000/uploads/blog/image_1600261041.jpg\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Hors\",\n                \"description\": \"asdasd\",\n                \"image\": \"http://localhost:8000/uploads/blog/image_1600347254.jpg\"\n            }\n        ],\n        \"meta\": {\n            \"page\": 1,\n            \"limit\": 10,\n            \"total\": 2,\n            \"last_page\": 1\n        }\n    },\n    \"status\": true\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Subscriber Store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"davidkocharyan94@gmail.com\"\r\n}"
+				},
+				"url": {
+					"raw": "https://lax-back.aimtech.am/api/v1/subscriber-store",
+					"protocol": "https",
+					"host": [
+						"lax-back",
+						"aimtech",
+						"am"
+					],
+					"path": [
+						"api",
+						"v1",
+						"subscriber-store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Concact Store",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Joe Dhoe\",\r\n    \"subject\": \"test subject\",\r\n    \"email\": \"davidkocharyan94@gmail.com\",\r\n    \"message\": \"lorem ipsum\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lax-back.aimtech.am/api/v1/contact-store",
+					"protocol": "https",
+					"host": [
+						"lax-back",
+						"aimtech",
+						"am"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contact-store"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Concact Store 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"first_name\": \"Joe\",\r\n    \"last_name\": \"Dhoe\",\r\n    \"phone\": \"+37499099248\",\r\n    \"email\": \"admisn@gmail.com\",\r\n    \"message\": \"lorem ipsum\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://admin.3des.ca/api/v1/contact-store",
+							"protocol": "http",
+							"host": [
+								"admin",
+								"3des",
+								"ca"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact-store"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Aug 2020 10:08:29 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 28 Aug 2020 10:08:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.3.8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"\",\n    \"data\": [],\n    \"status\": true\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
